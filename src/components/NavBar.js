@@ -1,13 +1,25 @@
 import logo from "../logo.svg";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const location = useLocation();
+
+  console.log(location.pathname);
+
+  useEffect(() => {
+    if (nav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [nav]);
 
   return (
     <div>
-      <nav class="bg-gray-900 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-        <div class="container flex items-center justify-between mx-auto">
+      <nav class="bg-gray-900 border-gray-200 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <div class="container px-6 sm:px-0 flex items-center justify-between mx-auto">
           <a href="/" class="flex items-center">
             <img src={logo} class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-white">
@@ -17,7 +29,7 @@ const NavBar = () => {
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            class="items-center block sm:hidden p-2 ml-3 text-sm text-gray-200 rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900"
+            class="items-center border-gray-100 block sm:hidden p-2 ml-3 text-sm text-gray-200 rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900"
             aria-controls="navbar-default"
             aria-expanded={nav}
             onClick={() => setNav(!nav)}
@@ -37,47 +49,52 @@ const NavBar = () => {
             </svg>
           </button>
           <div class="sm:block hidden w-full sm:w-auto" id="navbar-default">
-            <ul class="flex flex-col p-4 mt-4 rounded-lg bg-gray-900 sm:flex-row sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900">
-              <li>
-                <a
-                  href="/"
-                  class="block py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700"
-                  aria-current="page"
-                >
-                  Career
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about"
-                  class="block py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700"
-                >
-                  About
-                </a>
-              </li>
-            </ul>
+            <div class="flex flex-col p-4 mt-4 rounded-lg bg-gray-900 sm:flex-row sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900">
+              <Link
+                class={`${
+                  location.pathname === "/" && "bg-gray-600 text-gray-300"
+                } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
+                to="/"
+              >
+                Career
+              </Link>
+              <Link
+                to="/about"
+                className={`${
+                  location.pathname === "/about" && "bg-gray-600 text-gray-300"
+                } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
+              >
+                About
+              </Link>
+            </div>
           </div>
         </div>
         {nav && (
-          <ul class="flex sm:hidden flex-col gap-y-3 p-4 mt-4 rounded-lg bg-gray-900 sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900">
-            <li>
-              <a
-                href="/"
-                class="block py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700"
+          <div>
+            <div
+              onClick={() => setNav(false)}
+              className="fixed sm:hidden inset-0 bg-gray-300/60 backdrop-blur w-full h-screen top-14 right-0 z-30"
+            ></div>
+            <div class="flex px-6 py-10 absolute z-30 top-10 w-full sm:hidden flex-col gap-y-3 rounded-b-lg bg-gray-900 sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900">
+              <Link
+                to="/"
+                class={` ${
+                  location.pathname === "/" && "bg-gray-600 text-gray-300"
+                } block py-2 pl-3 duration-300 ease-in-out pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300`}
                 aria-current="page"
               >
                 Career
-              </a>
-            </li>
-            <li>
-              <a
-                href="/about"
-                class="block py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700"
+              </Link>
+              <Link
+                to="/about"
+                class={` ${
+                  location.pathname === "/about" && "bg-gray-600 text-gray-300"
+                } block py-2 pl-3 pr-4 duration-300 ease-in-out rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300`}
               >
                 About
-              </a>
-            </li>
-          </ul>
+              </Link>
+            </div>
+          </div>
         )}
       </nav>
     </div>
