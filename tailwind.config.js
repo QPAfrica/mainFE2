@@ -1,8 +1,13 @@
+// import logo from ''
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        hero: "url('/src/assets/images/bgsvg.svg')",
+      },
+    },
   },
   plugins: [],
 };

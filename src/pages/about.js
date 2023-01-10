@@ -79,7 +79,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -91,7 +91,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -103,7 +103,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -122,7 +122,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -134,7 +134,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -146,7 +146,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -158,7 +158,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -170,7 +170,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -182,7 +182,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a href="#" class="mr-4 py-2 hover:underline md:mr-6">
+                  <a class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -193,7 +193,7 @@ const about = () => {
         <hr />
         <div className="flex px-4 py-5 flex-col md:flex-row container mx-auto">
           <div className="flex flex-col items-center w-full md:w-1/2 md:text-left py-6 font-bold">
-            <h1 className="text-3xl py-1">Team</h1>
+            <h1 className="text-3xl py-1">News/Press/Insight</h1>
           </div>
           <div className="flex flex-col px-4 sm:px-4 md:px-2 lg:px-20 md:w-1/2 justify-center">
             <div>

@@ -2,7 +2,7 @@ import logo from "../logo.svg";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ home }) => {
   const [nav, setNav] = useState(false);
   const location = useLocation();
 
@@ -18,7 +18,11 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav class="bg-gray-900 border-gray-200 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+      <nav
+        class={`${
+          home ? "bg-gray-900 sm:bg-transparent" : "bg-gray-900"
+        } border-gray-200 sm:px-4 py-2.5 rounded dark:bg-gray-900`}
+      >
         <div class="container px-6 sm:px-0 flex items-center justify-between mx-auto">
           <a href="/" class="flex items-center">
             <img src={logo} class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
@@ -49,7 +53,11 @@ const NavBar = () => {
             </svg>
           </button>
           <div class="sm:block hidden w-full sm:w-auto" id="navbar-default">
-            <div class="flex flex-col p-4 mt-4 rounded-lg bg-gray-900 sm:flex-row sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900">
+            <div
+              class={`flex flex-col p-4 mt-4 rounded-lg ${
+                home ? "" : "bg-gray-900"
+              } sm:flex-row sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900`}
+            >
               <Link
                 class={`${
                   location.pathname === "/" && "bg-gray-600 text-gray-300"

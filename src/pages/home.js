@@ -1,15 +1,15 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
+import "../index.css";
 
 const home = () => {
   return (
-    <div className="bg-black">
-      <div className="relative min-h-screen bg-gray-900 text-white">
-        <NavBar />
+    <div className="relative bg-hero max-w-full">
+      <div className="relative z-5000 min-h-screen text-white">
+        <NavBar home={true} />
         <div class="relative h-[75vh] px-2">
           <div className="mx-auto container pt-[20%]">
             <h1 class="text-2xl sm:text-4xl md:text-5xl w-full sm:w-1/2 p-4 font-bold text-white">
@@ -33,7 +33,7 @@ const home = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer home={true} />
       </div>
       {/* <div class="flex flex-col min-h-screen" hastransition="true">
         <nav class="absolute top-0 left-0 w-full py-4 md:py-5 z-10 mix-blend-exclusion text-white">

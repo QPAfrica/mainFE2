@@ -7,7 +7,6 @@ import { Link as RLink } from "react-router-dom";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 const Fellows = () => {
-  let [activePeriod, setActivePeriod] = useState("About");
   const links = [
     {
       id: 1,
