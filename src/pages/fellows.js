@@ -1,5 +1,5 @@
 import "../index.css";
-import React, { useState } from "react";
+import React from "react";
 import Layout from "../components/Layout";
 import logo from "../../src/logo.svg";
 import { Link } from "react-scroll";
