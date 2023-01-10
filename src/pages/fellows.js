@@ -53,9 +53,7 @@ const Fellows = () => {
                     spy={true}
                     activeClass="active"
                     // onClick={() => setActivePeriod(link)}
-                    className={`cursor-pointer ${
-                      activePeriod === link ? "" : "text-black"
-                    } py-4 text-center text-base capitalize transition-colors duration-300 border-b-[2px] border-white hover:border-b-[2px] hover:border-green-700  sm:px-4`}
+                    className={`cursor-pointer py-4 text-center text-base capitalize transition-colors duration-300 border-b-[2px] border-white hover:border-b-[2px] hover:border-green-700  sm:px-4`}
                   >
                     {link}
                   </Link>
