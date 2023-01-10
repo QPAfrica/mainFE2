@@ -12,10 +12,10 @@ const Footer = ({ home }) => {
           </a>
         </span>
         <div class="flex items-center justify-center text-sm text-gray-300 sm:mt-0">
-          <a class="mr-4 hover:underline md:mr-6">
+          <a href="/" class="mr-4 hover:underline md:mr-6">
             <BsLinkedin size={18} />
           </a>
-          <a class="mr-4 hover:underline md:mr-6 ">
+          <a href="/" class="mr-4 hover:underline md:mr-6 ">
             <BsTwitter size={18} />
           </a>
         </div>

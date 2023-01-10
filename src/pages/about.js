@@ -79,7 +79,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -91,7 +91,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -103,7 +103,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -122,7 +122,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -134,7 +134,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -146,7 +146,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -158,7 +158,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -170,7 +170,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
@@ -182,7 +182,7 @@ const about = () => {
                   className="w-32 h-36 rounded-md items-center"
                 />
                 <div class="flex items-center text-sm text-gray-800 sm:mt-0">
-                  <a class="mr-4 py-2 hover:underline md:mr-6">
+                  <a href="/" class="mr-4 py-2 hover:underline md:mr-6">
                     <BsLinkedin size={28} />
                   </a>
                 </div>
