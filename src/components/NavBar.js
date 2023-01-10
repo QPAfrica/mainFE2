@@ -62,7 +62,7 @@ const NavBar = ({ home }) => {
                 class={`${
                   location.pathname === "/" && "bg-gray-600 text-gray-300"
                 } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
-                to="/"
+                to="/partners"
               >
                 Career
               </Link>
@@ -85,7 +85,7 @@ const NavBar = ({ home }) => {
             ></div>
             <div class="flex px-6 py-10 absolute z-30 top-10 w-full sm:hidden flex-col gap-y-3 rounded-b-lg bg-gray-900 sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900">
               <Link
-                to="/"
+                to="/partners"
                 class={` ${
                   location.pathname === "/" && "bg-gray-600 text-gray-300"
                 } block py-2 pl-3 duration-300 ease-in-out pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300`}
