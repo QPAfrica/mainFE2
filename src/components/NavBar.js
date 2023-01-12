@@ -55,8 +55,8 @@ const NavBar = ({ home }) => {
           <div class="sm:block hidden w-full sm:w-auto" id="navbar-default">
             <div
               class={`flex flex-col p-4 mt-4 rounded-lg ${
-                home ? "" : "bg-gray-900"
-              } sm:flex-row sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900`}
+                home ? "bg-transparent" : "bg-gray-900"
+              } sm:flex-row sm:mt-0 sm:font-medium md:border-0 bg-gray-900 md:bg-transparent`}
             >
               <Link
                 class={`${
