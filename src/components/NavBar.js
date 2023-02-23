@@ -20,14 +20,13 @@ const NavBar = ({ home }) => {
     <div>
       <nav
         class={`${
-          home ? "bg-gray-900 sm:bg-transparent" : "bg-gray-900"
-        } border-gray-200 sm:px-4 py-2.5 rounded dark:bg-gray-900`}
+          home ? "sm:bg-transparent" : "bg-gray-900"
+        } border-gray-200 sm:px-4 mx-auto opacity-40 max-w-screen-lg z-10 rounded-2xl`}
       >
         <div class="container px-6 sm:px-0 flex items-center justify-between mx-auto">
-          <a href="/" class="flex items-center">
-            <img src={logo} class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap text-white">
-              QP. Africa
+          <a href="/" class="items-center ml-3">
+            <span class="self-center !opacity-100 text-xl font-semibold whitespace-nowrap text-white">
+              QPAfrica
             </span>
           </a>
           <button
@@ -52,7 +51,7 @@ const NavBar = ({ home }) => {
               ></path>
             </svg>
           </button>
-          <div class="sm:block hidden w-full sm:w-auto" id="navbar-default">
+          {/* <div class="sm:block hidden w-full sm:w-auto" id="navbar-default">
             <div
               class={`flex flex-col p-4 mt-4 rounded-lg ${
                 home ? "bg-transparent" : "bg-gray-900"
@@ -75,7 +74,7 @@ const NavBar = ({ home }) => {
                 About
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
         {nav && (
           <div>

@@ -8,7 +8,7 @@ const Footer = ({ home }) => {
         <span class="text-sm text-gray-300 pb-3 sm:pb-0 text-center">
           All Rights Reserved © 2023{" "}
           <a href="/" class="hover:underline">
-            QP.Africa.
+            QPAfrica.
           </a>
         </span>
         <div class="flex items-center justify-center text-sm text-gray-300 sm:mt-0">
