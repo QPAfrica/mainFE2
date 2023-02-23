@@ -19,12 +19,12 @@ const NavBar = ({ home }) => {
     <div>
       <nav
         class={`${
-          home ? "sm:bg-transparent" : "bg-gray-900"
-        } border-gray-200 sm:px-4 mx-auto opacity-40 max-w-screen-lg z-10 rounded-2xl`}
+          home ? "absolute top-5 left-[50%] translate-x-[-50%]" : ""
+        } bg-[rgba(150, 250, 28, 0.5)] sm:px-4 w-full  mx-auto backdrop-blur-2xl max-w-screen-lg z-10 rounded-3xl`}
       >
         <div class="container px-6 sm:px-0 flex items-center justify-between mx-auto">
           <a href="/" class="items-center ml-3">
-            <span class="self-center !opacity-100 text-xl font-semibold whitespace-nowrap text-white">
+            <span class="self-center text-xl font-semibold whitespace-nowrap text-white">
               QPAfrica
             </span>
           </a>
@@ -50,7 +50,7 @@ const NavBar = ({ home }) => {
               ></path>
             </svg>
           </button>
-          {/* <div class="sm:block hidden w-full sm:w-auto" id="navbar-default">
+          <div class="sm:block hidden w-full sm:w-auto" id="navbar-default">
             <div
               class={`flex flex-col p-4 mt-4 rounded-lg ${
                 home ? "bg-transparent" : "bg-gray-900"
@@ -58,22 +58,49 @@ const NavBar = ({ home }) => {
             >
               <Link
                 class={`${
-                  location.pathname === "/" && "bg-gray-600 text-gray-300"
+                  location.pathname === "/partners" &&
+                  "bg-gray-600 text-gray-300"
+                } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
+                to="/partners"
+              >
+                Partner
+              </Link>
+              <Link
+                class={`${
+                  location.pathname === "/contact" &&
+                  "bg-gray-600 text-gray-300"
+                } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
+                to="/contact"
+              >
+                Contact
+              </Link>
+              <Link
+                class={`${
+                  location.pathname === "/blog" && "bg-gray-600 text-gray-300"
+                } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
+                to="/contact"
+              >
+                Blog
+              </Link>
+              <Link
+                class={`${
+                  location.pathname === "/contact" &&
+                  "bg-gray-600 text-gray-300"
                 } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
                 to="/partners"
               >
                 Career
               </Link>
-              <Link
+              {/* <Link
                 to="/about"
                 className={`${
                   location.pathname === "/about" && "bg-gray-600 text-gray-300"
                 } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
               >
                 About
-              </Link>
+              </Link> */}
             </div>
-          </div> */}
+          </div>
         </div>
         {nav && (
           <div>
