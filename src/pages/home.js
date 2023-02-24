@@ -13,7 +13,7 @@ const home = () => {
       <div className="relative min-h-screen text-white">
         <div className="circle mix-blend-multiply"></div>
         <div className="littlecircle mix-blend-multiply"></div>
-        <NavBar home={true} />
+        <NavBar />
         <div class="max-w-screen-lg mx-auto">
           <div className="absolute top-[50%] translate-y-[-50%] container px-2 sm:px-5">
             <h1 class="text-4xl text-center sm:text-left sm:text-5xl w-full md:w-2/3 lg:w-1/2 sm:p-4 font-bold text-white">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const NavBar = ({ home }) => {
+const NavBar = () => {
   const [nav, setNav] = useState(false);
   const location = useLocation();
 
@@ -17,12 +17,8 @@ const NavBar = ({ home }) => {
 
   return (
     <div>
-      <nav
-        class={`${
-          home ? "absolute top-5 left-[50%] translate-x-[-50%]" : ""
-        } bg-[rgba(150, 250, 28, 0.5)] sm:px-4 w-full  mx-auto backdrop-blur-2xl max-w-screen-lg z-10 rounded-3xl`}
-      >
-        <div class="container px-6 sm:px-0 flex items-center justify-between mx-auto">
+      <nav class="absolute sm:top-5 py-5 sm:py-0 left-[50%] translate-x-[-50%] sm:bg-gray-800 bg-gray-900 sm:px-4 w-full sm:mx-auto max-w-screen-lg z-10 sm:rounded-3xl">
+        <div class="container px-6 sm:px-0 flex items-center justify-between sm:mx-auto">
           <a href="/" class="items-center ml-3">
             <span class="self-center text-xl font-semibold whitespace-nowrap text-white">
               QPAfrica
@@ -31,7 +27,7 @@ const NavBar = ({ home }) => {
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            class="items-center border-gray-100 block sm:hidden p-2 ml-3 text-sm text-gray-200 rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900"
+            class="items-center border-gray-100 block sm:hidden p-2 ml-3 text-sm text-gray-200 rounded-lg focus:outline-none"
             aria-controls="navbar-default"
             aria-expanded={nav}
             onClick={() => setNav(!nav)}
@@ -52,15 +48,13 @@ const NavBar = ({ home }) => {
           </button>
           <div class="sm:block hidden w-full sm:w-auto" id="navbar-default">
             <div
-              class={`flex flex-col p-4 mt-4 rounded-lg ${
-                home ? "bg-transparent" : "bg-gray-900"
-              } sm:flex-row sm:mt-0 sm:font-medium md:border-0 bg-gray-900 md:bg-transparent`}
+              class={`flex flex-col p-4 mt-4 rounded-lg bg-transparent sm:flex-row sm:mt-0 sm:font-medium md:border-0 md:bg-transparent`}
             >
               <Link
                 class={`${
                   location.pathname === "/partners" &&
                   "bg-gray-600 text-gray-300"
-                } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
+                } block mr-2 hover:duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
                 to="/partners"
               >
                 Partner
@@ -106,9 +100,9 @@ const NavBar = ({ home }) => {
           <div>
             <div
               onClick={() => setNav(false)}
-              className="fixed sm:hidden inset-0 bg-gray-300/60 backdrop-blur w-full h-screen top-14 right-0 z-30"
+              className="fixed sm:hidden inset-0 bg-gray-300/60 backdrop-blur min-w-full min-h-screen right-0 top-16 z-30"
             ></div>
-            <div class="flex px-6 py-10 absolute z-30 top-10 w-full sm:hidden flex-col gap-y-3 rounded-b-lg bg-gray-900 sm:mt-0 sm:font-medium md:border-0 md:bg-gray-900">
+            <div class="flex px-6 py-10 absolute z-30 top-18 w-full sm:hidden flex-col gap-y-3 rounded-b-lg bg-gray-900 sm:mt-0 sm:font-medium md:border-0 sm:bg-gray-900">
               <Link
                 to="/partners"
                 class={` ${
