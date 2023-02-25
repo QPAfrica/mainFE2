@@ -1,11 +1,7 @@
 import "../index.css";
 import React from "react";
 import Layout from "../components/Layout";
-import logo from "../../src/logo.svg";
-import { Link } from "react-scroll";
 import hero from "../../src/assets/images/hero.jpeg";
-import { Link as RLink } from "react-router-dom";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import TabsComponent from "../components/TabComponent";
 import HeroSection from "../components/HeroSection";
 import FellowsComp from "../components/FellowsComp";

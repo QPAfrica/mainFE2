@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../components/Layout";
 import imgUrl from "../../src/assets/images/hero.jpeg";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
