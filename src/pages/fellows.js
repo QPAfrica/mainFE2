@@ -3,43 +3,47 @@ import React from "react";
 import Layout from "../components/Layout";
 import logo from "../../src/logo.svg";
 import { Link } from "react-scroll";
+import hero from "../../src/assets/images/hero.jpeg";
 import { Link as RLink } from "react-router-dom";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import TabsComponent from "../components/TabComponent";
+import HeroSection from "../components/HeroSection";
+import FellowsComp from "../components/FellowsComp";
+import About from "../components/About";
 
 const Fellows = () => {
-  const links = [
+  const data = [
     {
       id: 1,
-      link: "about",
+      name: "About",
+      link: "#about",
+      content: <About />,
     },
     {
       id: 2,
-      link: "eligibility",
+      name: "Eligibility",
+      link: "#eligibility",
+      content: <FellowsComp name="eligibility" />,
     },
     {
       id: 3,
-      link: "selection",
+      name: "Selection",
+      link: "#selection",
+      content: <FellowsComp name="selection" />,
     },
     {
       id: 4,
-      link: "fellowship",
+      name: "Fellowship",
+      link: "#fellowship",
+      content: "Fellowship",
     },
   ];
   return (
     <div>
       <Layout>
-        <div className="px-4 h-[400px] sm:h-[320px] py-5">
-          <div className="flex flex-col sm:flex-row justify-center items-center container mx-auto">
-            <div className="items-center flex flex-col justify-center w-full sm:w-1/2 text-center sm:text-left py-6 font-bold">
-              <h1 className="text-3xl">A Subtitle</h1>
-            </div>
-            <div className="flex w-full sm:w-1/2 justify-center items-center sm:self-end">
-              <img src={logo} class="w-72 h-72" alt="Flowbite Logo" />
-            </div>
-          </div>
-        </div>
-
-        <div className="max-w-screen-full drop-shadow-md">
+        <HeroSection title={"A Subtitle from Fellows"} imgUrl={hero} />
+        <TabsComponent links={data} />
+        {/* <div className="max-w-screen-full drop-shadow-md">
           <div className="mx-auto ">
             <div className="flex justify-center py-1 sticky top-0 z-200 bg-white">
               <div className="grid gap-x-4 grid-cols-2 sm:grid-cols-4">
@@ -181,7 +185,7 @@ const Fellows = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </Layout>
     </div>
   );

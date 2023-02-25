@@ -18,7 +18,7 @@ code {
 }
 a.active {
   border-bottom-width: 2px;
-  border-color: rgb(21 128 61);
+  border-color: white;
   font-weight: bold;
 }
 

@@ -1,13 +1,16 @@
 import "../index.css";
 import React from "react";
 import Layout from "../components/Layout";
-import logo from "../../src/logo.svg";
-import { Link } from "react-scroll";
+import hero from "../../src/assets/images/hero.jpeg";
 import { Link as RLink } from "react-router-dom";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import {
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import HeroSection from "../components/HeroSection";
+import ScrollLinks from "../components/ScrollLinks";
 
 const Partners = () => {
-  const links = [
+  const data = [
     {
       id: 1,
       link: "industry",
@@ -20,69 +23,46 @@ const Partners = () => {
   return (
     <div>
       <Layout>
-        <div className="px-4 h-[400px] sm:h-[320px] py-5">
-          <div className="flex flex-col sm:flex-row justify-center items-center container mx-auto">
-            <div className="items-center flex flex-col justify-center w-full sm:w-1/2 text-center sm:text-left py-6 font-bold">
-              <h1 className="text-3xl">A Subtitle</h1>
-            </div>
-            <div className="flex w-full sm:w-1/2 justify-center items-center sm:self-end">
-              <img src={logo} class="w-72 h-72" alt="Flowbite Logo" />
-            </div>
-          </div>
-        </div>
-
-        <div className="max-w-screen-full drop-shadow-md">
-          <div className="mx-auto ">
-            <div className="flex justify-center py-1 sticky top-0 z-200 bg-white">
-              <div className="grid gap-x-4 grid-cols-2">
-                {links.map(({ id, link }) => (
-                  <Link
-                    key={id}
-                    to={link}
-                    smooth
-                    offset={-70}
-                    hashSpy={true}
-                    spy={true}
-                    activeClass="active"
-                    // onClick={() => setActivePeriod(link)}
-                    className={`cursor-pointer py-4 text-center text-base capitalize transition-colors duration-300 border-b-[2px] border-white hover:border-b-[2px] hover:border-green-700  sm:px-4`}
-                  >
-                    {link}
-                  </Link>
-                ))}
-              </div>
-            </div>
+        <HeroSection title={"A Subtitle from Partners"} imgUrl={hero} />
+        <div className="max-w-screen-full bg-gray-900 drop-shadow-md">
+          <div className="mx-auto max-w-screen-md">
+            <ScrollLinks links={data} />
             <div className="py-5 md:py-10 px-10 md:px-0">
-              <div className="mx-auto max-w-screen-sm text-justify">
-                <div name="industry" className="py-5">
-                  <h1 className="text-3xl py-3">Industry</h1>
-                  <p class="py-2">
-                    We deliver an intensive 6-month program where our software
-                    developers learn both full-stack software development and
-                    additional soft skills in an immersive environment. Through
-                    an agile delivery methodology, mentor matching and
-                    leadership modules, our elite engineers are equipped with
-                    techniques and a leadership mindset that enables them to
-                    work competitively in any team globally.
-                  </p>
-                  <p class="py-2">
-                    We deliver an intensive 6-month program where our software
-                    developers learn both full-stack software development and
-                    additional soft skills in an immersive environment. Through
-                    an agile delivery methodology, mentor matching and
-                    leadership modules, our elite engineers are equipped with
-                    techniques and a leadership mindset that enables them to
-                    work competitively in any team globally.
-                  </p>
-                  <div className="flex justify-end py-2 font-semibold items-center">
-                    <RLink
-                      to="https://www.greenhouse.com/"
-                      target={"_blank"}
-                      className="flex flex-row justify-center items-center mr-2"
-                    >
-                      <MdOutlineKeyboardArrowLeft size={25} />
-                      <p className="text-xs sm:text-base">Contact us</p>
-                    </RLink>
+              <div className="mx-auto text-white max-w-screen-md text-justify">
+                <div name="industry" className="py-5 px-5">
+                  <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
+                    <div className=" flex items-center">
+                      <img
+                        src={hero}
+                        class="w-72 h-56 rounded-xl"
+                        alt="Flowbite Logo"
+                      />
+                    </div>
+                    <div>
+                      <h1 className="text-3xl py-3">Industry</h1>
+                      <p class="py-2 text-gray-400">
+                        We deliver an intensive 6-month program where our
+                        software developers learn both full-stack software
+                        development and additional soft skills in an immersive
+                        environment.
+                      </p>
+                      <p class="py-2 text-gray-400">
+                        Through an agile delivery methodology, mentor matching
+                        and leadership modules, our elite engineers are equipped
+                        with techniques and a leadership mindset that enables
+                        them to work competitively in any team globally.
+                      </p>
+                      <div className="flex py-2 font-semibold items-center">
+                        <RLink
+                          to="https://www.greenhouse.com/"
+                          target={"_blank"}
+                          className="flex flex-row justify-center items-center mr-2"
+                        >
+                          <p className="text-xs sm:text-base">Contact us</p>
+                          <MdOutlineKeyboardArrowRight className="pt-1" size={25} />
+                        </RLink>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div name="academics" className="py-5">
@@ -123,7 +103,7 @@ const Partners = () => {
                       target={"_blank"}
                       className="flex flex-row justify-center items-center mr-2"
                     >
-                      <MdOutlineKeyboardArrowLeft size={25} />{" "}
+                      <MdOutlineKeyboardArrowRight size={25} />{" "}
                       <p className="text-xs sm:text-base">Apply</p>
                     </RLink>
                   </div>
