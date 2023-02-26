@@ -22,13 +22,12 @@ export default function TabsComponent({ links }) {
                       : "border-b-2 border-gray-900"
                   } text-center`}
                 >
-                  <a
-                    href={tab.name}
+                  <span
                     onClick={() => setOpenTab(tab.name)}
                     className="inline-block py-3 cursor-pointer text-white"
                   >
                     {tab.name}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
