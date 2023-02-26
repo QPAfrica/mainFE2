@@ -23,7 +23,7 @@ export default function TabsComponent({ links }) {
                   } text-center`}
                 >
                   <a
-                    // href={tab.name}
+                    href={tab.name}
                     onClick={() => setOpenTab(tab.name)}
                     className="inline-block py-3 cursor-pointer text-white"
                   >

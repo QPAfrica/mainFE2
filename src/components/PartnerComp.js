@@ -8,7 +8,7 @@ const PartnerComp = ({ data }) => {
     <div className="p-5">
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
         <div className=" flex items-center">
-          <img src={data?.img} class="w-72 h-56 rounded-xl" />
+          <img src={data?.img} alt="partner" class="w-72 h-56 rounded-xl" />
         </div>
         <div>
           <h1 className="text-3xl py-3">{data.name}</h1>
