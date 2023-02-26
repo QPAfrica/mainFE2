@@ -19,11 +19,11 @@ const NavBar = () => {
     <div>
       <nav class="absolute sm:top-5 py-5 sm:py-0 left-[50%] translate-x-[-50%] sm:bg-gray-800 bg-gray-900 sm:px-4 w-full sm:mx-auto max-w-screen-lg z-10 sm:rounded-3xl">
         <div class="container px-6 sm:px-0 flex items-center justify-between sm:mx-auto">
-          <a href="/" class="items-center ml-3">
+          <Link to="/" class="items-center ml-3">
             <span class="self-center text-xl font-semibold whitespace-nowrap text-white">
               QPAfrica
             </span>
-          </a>
+          </Link>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -72,7 +72,7 @@ const NavBar = () => {
                 class={`${
                   location.pathname === "/blog" && "bg-gray-600 text-gray-300"
                 } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
-                to="/contact"
+                to="/blog"
               >
                 Blog
               </Link>

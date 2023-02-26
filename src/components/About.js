@@ -1,10 +1,8 @@
 import React from "react";
 import imgUrl from "../../src/assets/images/hero.jpeg";
 import {
-  MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import { BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import person1 from "../../src/assets/images/person1.webp";
 import person2 from "../../src/assets/images/person2.jpg";
