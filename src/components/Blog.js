@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const Blog = ({ blog }) => {
   return (
-    <Link
-      to={{
-        pathname: `/blogs/${blog.id}`,
-        state: { id: blog.id, title: blog.title, desc: blog.desc },
-      }}
-    >
-      <div className="max-w-screen-md cursor-pointer mx-auto bg-gray-800 px-5 md:px-10 mb-10 rounded-lg">
+    <div className="max-w-screen-md hover:scale-105 duration-300 ease-in-out cursor-pointer mx-auto bg-gray-800 px-5 md:px-10 mb-10 rounded-lg">
+      <Link
+        to={{
+          pathname: `/blogs/${blog.id}`,
+          state: { id: blog.id, title: blog.title, desc: blog.desc },
+        }}
+      >
         <div className="flex gap-10 md:py-8 py-5 flex-col md:flex-row">
           <img
             src={blog.img}
@@ -24,8 +24,8 @@ const Blog = ({ blog }) => {
             </div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
