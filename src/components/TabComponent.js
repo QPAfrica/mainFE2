@@ -5,9 +5,9 @@ export default function TabsComponent({ links }) {
 
   return (
     <div className="w-full bg-gray-900">
-      <div className="max-w-screen-md md:mx-auto mx-3">
+      <div className="">
         <div>
-          <div className="border-b-[1px] top-0 z-200 sticky bg-gray-900 border-gray-500 sm:px-28">
+          <div className="border-b-[1px] max-w-screen-lg md:mx-auto mx-3 pt-2 top-0 z-200 sticky bg-gray-900 border-gray-500 sm:px-28">
             <ul
               className={`grid ${
                 links.length === 4 ? "grid-cols-4" : "grid-cols-2"
@@ -32,7 +32,15 @@ export default function TabsComponent({ links }) {
               ))}
             </ul>
           </div>
-          <div className="px-3 mt-6 text-white">
+          <div
+            className={`px-3 mt-6 ${
+              openTab === "About" ||
+              openTab === "Industry" ||
+              openTab === "Academics"
+                ? "max-w-screen-lg mx-auto"
+                : "max-w-screen-md mx-auto"
+            } text-white`}
+          >
             {links.map((tab) => (
               <div
                 key={tab.name}

@@ -1,8 +1,6 @@
 import React from "react";
 import imgUrl from "../../src/assets/images/hero.jpeg";
-import {
-  MdOutlineKeyboardArrowRight,
-} from "react-icons/md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import person1 from "../../src/assets/images/person1.webp";
 import person2 from "../../src/assets/images/person2.jpg";
@@ -79,7 +77,7 @@ const About = () => {
   ];
   return (
     <div className="w-full bg-gray-900">
-      <div className="container mx-auto">
+      <div className="max-w-screen-lg mx-auto">
         <div className="flex gap-10 sm:py-16 py-7 flex-col sm:flex-row">
           <p className="text-gray-300 sm:w-3/5 w-full flex justify-center items-center">
             Lorem ipsum dolor sit amet consectetur. Faucibus est ultrices

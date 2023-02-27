@@ -5,6 +5,7 @@ import Blog from "../src/pages/blog";
 // import About from "../src/pages/about";
 import Fellows from "../src/pages/fellows";
 import Partners from "../src/pages/partners";
+import SingleBlog from "../src/pages/singleblog";
 import "./index.css";
 
 export default function App() {
@@ -12,8 +13,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="blog" element={<Blog />} />
-        {/* <Route path="about" element={<About />} /> */}
+        <Route path="blogs" element={<Blog />} />
+        <Route path="/blogs/:id" element={<SingleBlog />} />
         <Route path="fellows" element={<Fellows />} />
         <Route path="partners" element={<Partners />} />
       </Routes>

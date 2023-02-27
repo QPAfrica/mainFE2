@@ -36,9 +36,9 @@ const blog = () => {
             <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
           </div>
           <div className="py-10">
-          {blogs.map((blog) => (
-            <Blog blog={blog} />
-          ))}
+            {blogs.map((blog) => (
+              <Blog blog={blog} />
+            ))}
           </div>
         </div>
       </Layout>

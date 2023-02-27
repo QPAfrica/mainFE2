@@ -70,9 +70,9 @@ const NavBar = () => {
               </Link>
               <Link
                 class={`${
-                  location.pathname === "/blog" && "bg-gray-600 text-gray-300"
+                  location.pathname === "/blogs" && "bg-gray-600 text-gray-300"
                 } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
-                to="/blog"
+                to="/blogs"
               >
                 Blog
               </Link>
