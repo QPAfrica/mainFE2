@@ -3,7 +3,7 @@ import { BsLinkedin } from "react-icons/bs";
 
 const TeamMember = ({ member }) => {
   return (
-    <div className="flex flex-col bg-gray-800 rounded-md justify-center">
+    <div className="flex flex-col bg-gray-800 rounded-md justify-center hover:scale-105 duration-200 cursor-pointer">
       <img
         src={member.img}
         alt="img1"

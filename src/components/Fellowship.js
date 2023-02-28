@@ -1,6 +1,8 @@
 import React from "react";
 import { Link as RLink } from "react-router-dom";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { fadeIn, staggerContainer } from "../utils/motion";
+import { motion } from "framer-motion";
 
 const Fellowship = () => {
   const fellowship = [
@@ -34,9 +36,18 @@ const Fellowship = () => {
     },
   ];
   return (
-    <div className="py-5">
-      {fellowship.map((item) => (
-        <div key={item.id}>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: "false", amount: 0.1 }}
+      className="py-5"
+    >
+      {fellowship.map((item, index) => (
+        <motion.div
+          variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+          key={item.id}
+        >
           <h1 className="text-3xl py-3 font-bold">{item.title}</h1>
           <p class="py-2 text-gray-300">{item.text}</p>
           <div className="flex justify-end py-2 font-semibold items-center">
@@ -49,9 +60,9 @@ const Fellowship = () => {
               <MdOutlineKeyboardArrowRight size={25} className="mt-1" />
             </RLink>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

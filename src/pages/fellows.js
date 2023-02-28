@@ -7,6 +7,8 @@ import HeroSection from "../components/HeroSection";
 import FellowsComp from "../components/FellowsComp";
 import About from "../components/About";
 import Fellowship from "../components/Fellowship";
+import { fadeIn, staggerContainer } from "../utils/motion";
+import { motion } from "framer-motion";
 
 const Fellows = () => {
   const totalData = [
@@ -56,12 +58,20 @@ const Fellows = () => {
   ];
 
   return (
-    <div>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: "false", amount: 0.1 }}
+      className="overflow-hidden"
+    >
       <Layout>
         <HeroSection title={"A Subtitle from Fellows"} imgUrl={hero} />
-        <TabComponent links={data} />
+        <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
+          <TabComponent links={data} />
+        </motion.div>
       </Layout>
-    </div>
+    </motion.div>
   );
 };
 

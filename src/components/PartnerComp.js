@@ -1,12 +1,23 @@
 import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
 const PartnerComp = ({ data }) => {
   console.log(data);
   return (
-    <div className="p-5">
-      <div className="flex gap-10 md:py-8 py-5 flex-col md:flex-row">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: "false", amount: 0.1 }}
+      className="p-5"
+    >
+      <motion.div
+        variants={fadeIn("down", "spring", 0.2, 0.75)}
+        className="flex gap-10 md:py-8 py-5 flex-col md:flex-row"
+      >
         <div className="md:w-2/5 w-full flex items-center justify-center min-w-[280px] max-w-[400px] mx-auto rounded-xl">
           <img src={data?.img} alt="partner" class="rounded-xl" />
         </div>
@@ -28,8 +39,8 @@ const PartnerComp = ({ data }) => {
             )}
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

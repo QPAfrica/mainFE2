@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import imgUrl from "../../src/assets/images/hero.jpeg";
 import Blog from "../components/Blog";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
 const blogs = [
   {
@@ -35,11 +37,21 @@ const blog = () => {
             <h1 className="text-3xl font-bold py-8 sm:py-0 text-white">Blog</h1>
             <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
           </div>
-          <div className="py-10">
-            {blogs.map((blog) => (
-              <Blog blog={blog} />
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: "false", amount: 0.25 }}
+            className="py-10"
+          >
+            {blogs.map((blog, index) => (
+              <motion.div
+                variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+              >
+                <Blog blog={blog} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </Layout>
     </div>
