@@ -7,7 +7,7 @@ import { GrFacebookOption, GrLinkedinOption, GrTwitter } from "react-icons/gr";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
-import { fadeIn, slideIn, staggerContainer } from "../utils/motion";
+import { fadeIn, staggerContainer } from "../utils/motion";
 
 const home = () => {
   return (
