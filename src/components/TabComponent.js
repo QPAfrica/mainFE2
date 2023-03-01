@@ -34,9 +34,7 @@ export default function TabsComponent({ links }) {
           </div>
           <div
             className={`px-3 mt-6 ${
-              openTab === "About" ||
-              openTab === "Industry" ||
-              openTab === "Academics"
+              openTab === "Industry" || openTab === "Academics"
                 ? "max-w-screen-lg mx-auto"
                 : "max-w-screen-md mx-auto"
             } text-white`}

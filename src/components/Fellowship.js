@@ -45,7 +45,7 @@ const Fellowship = () => {
     >
       {fellowship.map((item, index) => (
         <motion.div
-          variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+          variants={fadeIn("down", "spring", index * 0.5, 0.75)}
           key={item.id}
         >
           <h1 className="text-3xl py-3 font-bold">{item.title}</h1>

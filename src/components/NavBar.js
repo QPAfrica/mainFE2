@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { fadeIn, navVariants, staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
+import logo from "../assets/images/QPAfricaLogo.svg";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -26,7 +27,7 @@ const NavBar = () => {
       <div class="container px-6 sm:px-0 flex items-center justify-between sm:mx-auto">
         <Link to="/" class="items-center ml-3">
           <span class="self-center text-xl font-semibold whitespace-nowrap text-white">
-            QPAfrica
+            <img src={logo} />
           </span>
         </Link>
         <button
@@ -81,6 +82,15 @@ const NavBar = () => {
             </Link>
             <Link
               class={`${
+                location.pathname === "/about" && "bg-gray-600 text-gray-300"
+              } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
+              to="/about"
+            >
+              About
+            </Link>
+            <Link
+              target="_blank"
+              class={`${
                 location.pathname === "/careers" && "bg-gray-600 text-gray-300"
               } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
               to="/partners"
@@ -100,7 +110,7 @@ const NavBar = () => {
           <motion.div
             variants={fadeIn("down", "spring", 0.2, 0.75)}
             onClick={() => setNav(false)}
-            className="fixed sm:hidden inset-0 bg-gray-300/60 backdrop-blur min-w-full min-h-screen right-0 top-16 z-30"
+            className="fixed sm:hidden inset-0 bg-gray-300/60 backdrop-blur min-w-full min-h-screen right-0 top-20 z-30"
           ></motion.div>
           <motion.div
             variants={fadeIn("down", "spring", 0.2, 0.75)}
@@ -132,7 +142,16 @@ const NavBar = () => {
               Blog
             </Link>
             <Link
-              to="/careers"
+              to="/about"
+              class={` ${
+                location.pathname === "/about" && "bg-gray-600 text-gray-300"
+              } block py-2 pl-3 pr-4 duration-300 ease-in-out rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300`}
+            >
+              About
+            </Link>
+            <Link
+              to="/partners"
+              target="_blank"
               class={` ${
                 location.pathname === "/careers" && "bg-gray-600 text-gray-300"
               } block py-2 pl-3 pr-4 duration-300 ease-in-out rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300`}

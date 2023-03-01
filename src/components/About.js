@@ -85,7 +85,8 @@ const About = () => {
       viewport={{ once: "false", amount: 0.1 }}
       className="w-full bg-gray-900"
     >
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg px-4 mx-auto">
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         <div className="flex gap-10 sm:py-16 py-7 flex-col sm:flex-row">
           <motion.p
             variants={fadeIn("right", "teween", 0.2, 1)}
@@ -116,7 +117,7 @@ const About = () => {
         >
           <motion.h1
             variants={fadeIn("right", "teween", 0.2, 1)}
-            className="text-2xl text-center md:text-left sm:pl-2 pb-5 md:pb-0 font-bold md:w-2/6 w-full"
+            className="text-2xl text-center text-white md:text-left sm:pl-2 pb-5 md:pb-0 font-bold md:w-2/6 w-full"
           >
             Be a Pioneer
           </motion.h1>
@@ -160,7 +161,7 @@ const About = () => {
         <div className="flex md:py-16 py-7 flex-col md:flex-row">
           <motion.h1
             variants={fadeIn("left", "teween", 0.2, 1)}
-            className="text-2xl md:pl-2 pb-5 pt-3 text-center md:text-left md:pb-0 font-bold md:w-2/6 w-full"
+            className="text-2xl text-white md:pl-2 pb-5 pt-3 text-center md:text-left md:pb-0 font-bold md:w-2/6 w-full"
           >
             Founding Members
           </motion.h1>
@@ -183,7 +184,7 @@ const About = () => {
 
             <motion.h1
               variants={fadeIn("left", "spring", 2.5, 0.75)}
-              class="font-bold py-5 text-center md:text-left text-2xl"
+              class="font-bold text-white py-5 text-center md:text-left text-2xl"
             >
               Other members
             </motion.h1>
@@ -216,7 +217,7 @@ const About = () => {
             variants={fadeIn("right", "spring", 0.2, 0.75)}
             className="w-full md:pl-2 pb-5 md:pb-0 md:w-2/6 md:text-left font-bold"
           >
-            <h1 className="text-2xl">News/Press/Insight</h1>
+            <h1 className="text-2xl text-white">News/Press/Insight</h1>
           </motion.div>
           <motion.div
             variants={fadeIn("left", "spring", 0.2, 0.75)}
@@ -238,7 +239,7 @@ const About = () => {
               <div className="flex py-3 flex-row w-full justify-start font-semibold items-center">
                 <Link
                   to=""
-                  className="flex flex-row font-semibold items-center"
+                  className="flex flex-row text-white font-semibold items-center"
                 >
                   <p>Read more</p>
                   <MdOutlineKeyboardArrowRight size={25} className="mt-1" />

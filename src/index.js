@@ -6,6 +6,7 @@ import Fellows from "../src/pages/fellows";
 import Partners from "../src/pages/partners";
 import SingleBlog from "../src/pages/singleblog";
 import Contact from "./pages/contact";
+import About from "./pages/about";
 import "./index.css";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route path="blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<SingleBlog />} />
         <Route path="fellows" element={<Fellows />} />

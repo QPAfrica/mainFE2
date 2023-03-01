@@ -23,8 +23,8 @@ const Contact = () => {
         className="relative w-full App bg-gray-900 max-w-full"
       >
         <div className="relative h-screen text-white">
-          <div className="circle mix-blend-multiply"></div>
-          <div className="littlecircle mix-blend-multiply"></div>
+          {/* <div className="circle mix-blend-multiply"></div>
+          <div className="littlecircle mix-blend-multiply"></div> */}
           <NavBar />
           <div className="px-4 sm:pt-20 bg-gray-900 w-full absolute top-[50%] translate-y-[-50%]">
             <motion.div
