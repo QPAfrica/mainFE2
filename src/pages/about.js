@@ -29,33 +29,6 @@ const Fellows = () => {
     },
   ];
 
-  const data = [
-    {
-      id: 1,
-      name: "About",
-      link: "#about",
-      content: <About />,
-    },
-    {
-      id: 2,
-      name: "Eligibility",
-      link: "#eligibility",
-      content: <FellowsComp data={totalData[0]} />,
-    },
-    {
-      id: 3,
-      name: "Selection",
-      link: "#selection",
-      content: <FellowsComp data={totalData[1]} />,
-    },
-    {
-      id: 4,
-      name: "Fellowship",
-      link: "#fellowship",
-      content: <Fellowship />,
-    },
-  ];
-
   return (
     <motion.div
       variants={staggerContainer}
@@ -68,7 +41,6 @@ const Fellows = () => {
         <HeroSection title={"A Subtitle from Fellows"} imgUrl={hero} />
         <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
           <About />
-          {/* <TabComponent links={data} /> */}
         </motion.div>
       </Layout>
     </motion.div>

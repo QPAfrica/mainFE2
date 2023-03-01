@@ -27,7 +27,7 @@ const NavBar = () => {
       <div class="container px-6 sm:px-0 flex items-center justify-between sm:mx-auto">
         <Link to="/" class="items-center ml-3">
           <span class="self-center text-xl font-semibold whitespace-nowrap text-white">
-            <img src={logo} />
+            <img src={logo} alt="QPAfrica Logo" />
           </span>
         </Link>
         <button
