@@ -12,7 +12,7 @@ const PartnerComp = ({ data }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: "false", amount: 0.1 }}
-      className="p-5"
+      className="p-5 mb-10 sm:mb-16"
     >
       <motion.div
         variants={fadeIn("down", "spring", 0.2, 0.75)}
@@ -32,7 +32,12 @@ const PartnerComp = ({ data }) => {
                   target={"_blank"}
                   className="flex flex-row justify-center items-center mr-2"
                 >
-                  <p className="text-xs sm:text-base">Contact us</p>
+                  <a
+                    href="mailto:hello@qpafrica.com"
+                    className="text-xs sm:text-base"
+                  >
+                    Contact us
+                  </a>
                   <MdOutlineKeyboardArrowRight className="pt-1" size={25} />
                 </Link>
               </div>
