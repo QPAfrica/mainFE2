@@ -4,6 +4,7 @@ import imgUrl from "../../src/assets/images/hero.jpeg";
 import Blog from "../components/Blog";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/motion";
+import { Helmet } from "react-helmet";
 
 const blogs = [
   {
@@ -31,6 +32,11 @@ const blogs = [
 const blog = () => {
   return (
     <div>
+      <Helmet>
+        <html lang="en" />
+        <title>Blogs - QPAfrica</title>
+        <meta name="description" content="Meta Description here" />
+      </Helmet>
       <Layout>
         <div className="px-4 bg-gray-900 pt-16 w-full sm:pt-36">
           <div className="max-w-screen-lg mx-auto">

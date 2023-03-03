@@ -8,6 +8,7 @@ import FellowsComp from "../components/FellowsComp";
 import Fellowship from "../components/Fellowship";
 import { fadeIn, staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const Fellows = () => {
   const totalData = [
@@ -65,20 +66,27 @@ const Fellows = () => {
   ];
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: "false", amount: 0.1 }}
-      className="overflow-hidden"
-    >
-      <Layout>
-        <HeroSection title={"A Subtitle from Fellows"} imgUrl={hero} />
-        <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
-          <TabComponent links={data} />
-        </motion.div>
-      </Layout>
-    </motion.div>
+    <>
+      <Helmet>
+        <html lang="en" />
+        <title>Fellows - QPAfrica</title>
+        <meta name="description" content="Meta Description here" />
+      </Helmet>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: "false", amount: 0.1 }}
+        className="overflow-hidden"
+      >
+        <Layout>
+          <HeroSection title={"A Subtitle from Fellows"} imgUrl={hero} />
+          <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
+            <TabComponent links={data} />
+          </motion.div>
+        </Layout>
+      </motion.div>
+    </>
   );
 };
 

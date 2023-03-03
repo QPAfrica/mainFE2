@@ -32,12 +32,18 @@ const PartnerComp = ({ data }) => {
                   target={"_blank"}
                   className="flex flex-row justify-center items-center mr-2"
                 >
-                  <a
-                    href="mailto:hello@qpafrica.com"
-                    className="text-xs sm:text-base"
-                  >
-                    Contact us
-                  </a>
+                  {data.name === "Industry" ? (
+                    <a
+                      href="mailto:hello@qpafrica.com"
+                      className="text-xs sm:text-base"
+                    >
+                      Contact us
+                    </a>
+                  ) : (
+                    <a href={data.addlink} className="text-xs sm:text-base">
+                      See more
+                    </a>
+                  )}
                   <MdOutlineKeyboardArrowRight className="pt-1" size={25} />
                 </Link>
               </div>

@@ -6,6 +6,7 @@ import imgUrl from "../../src/assets/images/hero.jpeg";
 import HeroSection from "../components/HeroSection";
 import TabsComponent from "../components/TabComponent";
 import PartnerComp from "../components/PartnerComp";
+import { Helmet } from "react-helmet";
 
 const Partners = () => {
   const componentData = [
@@ -21,6 +22,7 @@ const Partners = () => {
       name: "Academics",
       img: imgUrl,
       text: `We deliver an intensive 6-month program where our software developers learn both full-stack software development and additional soft skills in an immersive environment. Through an agile delivery methodology, mentor matching and leadership modules, our elite engineers are equipped with techniques and a leadership mindset that enables them to work competitively in any team globally.`,
+      addlink: "/",
     },
   ];
   const data = [
@@ -37,6 +39,11 @@ const Partners = () => {
   ];
   return (
     <div>
+      <Helmet>
+        <html lang="en" />
+        <title>Partners - QPAfrica</title>
+        <meta name="description" content="Meta Description here" />
+      </Helmet>
       <Layout>
         <HeroSection title={"A Subtitle from Partners"} imgUrl={hero} />
         <TabsComponent links={data} />

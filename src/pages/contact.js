@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { fadeIn, staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -15,6 +16,11 @@ const Contact = () => {
   };
   return (
     <>
+      <Helmet>
+        <html lang="en" />
+        <title>Contact - QPAfrica</title>
+        <meta name="description" content="Meta Description here" />
+      </Helmet>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
