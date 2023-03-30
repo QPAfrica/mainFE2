@@ -63,7 +63,7 @@ const home = () => {
                 <div class="flex w-full md:w-2/3 lg:w-1/2 text-sm justify-center sm:justify-start text-gray-300 p-4">
                   {/* <a
                     href="/"
-                    target="_blank"
+                    
                     class="mr-4 hover:scale-110 duration-200 md:mr-6 bg-slate-400 rounded-md p-1"
                   >
                     <GrFacebookOption size={18} color={"black"} />
