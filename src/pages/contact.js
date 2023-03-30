@@ -4,14 +4,28 @@ import NavBar from "../components/NavBar";
 import { fadeIn, staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    emailjs.sendForm(
+      "service_hey8g2b",
+      "template_78tranj",
+      event.target,
+      "WyqDbB03MxR12L1oe"
+    );
+
+    alert("Message sent successfully...");
+    setEmail("");
+    setName("");
+    setMessage("");
+
     console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
   };
   return (
@@ -38,7 +52,7 @@ const Contact = () => {
               className="max-w-screen-md mx-auto"
             >
               <h1 className="text-3xl text-center font-bold py-8 sm:py-0 text-white">
-                Need help? Get in touch with us
+                Let’s talk. Get in touch with us
               </h1>
               <form
                 onSubmit={handleSubmit}
@@ -53,7 +67,8 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
-                    id="name"
+                    id="from_name"
+                    name="from_name"
                     placeholder="Your name"
                     className="w-full backdrop-blur-2xl bg-gray-700 p-3 focus:outline-none text-gray-300 rounded-lg"
                     value={name}
@@ -70,7 +85,8 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
-                    id="email"
+                    id="email_from"
+                    name="email_from"
                     placeholder="example@email.com"
                     className="w-full backdrop-blur-2xl bg-gray-700 p-3 focus:outline-none text-gray-300 rounded-lg"
                     value={email}
@@ -87,6 +103,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     placeholder="Type here..."
                     className="w-full backdrop-blur-2xl bg-gray-700 p-3 focus:outline-none text-gray-300 rounded-lg"
                     value={message}

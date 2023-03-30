@@ -72,14 +72,14 @@ const NavBar = () => {
             >
               Contact
             </Link>
-            <Link
+            {/* <Link
               class={`${
                 location.pathname === "/blogs" && "bg-gray-600 text-gray-300"
               } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
               to="/blogs"
             >
               Blog
-            </Link>
+            </Link> */}
             <Link
               class={`${
                 location.pathname === "/about" && "bg-gray-600 text-gray-300"
@@ -88,15 +88,15 @@ const NavBar = () => {
             >
               About
             </Link>
-            <Link
+
+            <a
               target="_blank"
-              class={`${
-                location.pathname === "/careers" && "bg-gray-600 text-gray-300"
-              } block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`}
-              to="/partners"
+              href="https://atafrica.zohorecruit.com/careers"
+              className="block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`"
+              rel="noreferrer"
             >
               Career
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -133,14 +133,14 @@ const NavBar = () => {
             >
               Contact
             </Link>
-            <Link
+            {/* <Link
               to="/blogs"
               class={` ${
                 location.pathname === "/blogs" && "bg-gray-600 text-gray-300"
               } block py-2 pl-3 pr-4 duration-300 ease-in-out rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300`}
             >
               Blog
-            </Link>
+            </Link> */}
             <Link
               to="/about"
               class={` ${
@@ -149,15 +149,14 @@ const NavBar = () => {
             >
               About
             </Link>
-            <Link
-              to="/partners"
+            <a
               target="_blank"
-              class={` ${
-                location.pathname === "/careers" && "bg-gray-600 text-gray-300"
-              } block py-2 pl-3 pr-4 duration-300 ease-in-out rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300`}
+              href="https://atafrica.zohorecruit.com/careers"
+              className="block mr-2 duration-300 ease-in-out py-2 pl-3 pr-4 rounded text-gray-300 hover:bg-gray-600 hover:text-gray-300 dark:hover:bg-gray-700`"
+              rel="noreferrer"
             >
               Career
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       )}

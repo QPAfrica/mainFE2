@@ -1,7 +1,7 @@
 import "../index.css";
 import React from "react";
 import Layout from "../components/Layout";
-import hero from "../../src/assets/images/hero.jpeg";
+import About1 from "../../src/assets/images/about1.png";
 import HeroSection from "../components/HeroSection";
 import About from "../components/About";
 import { fadeIn, staggerContainer } from "../utils/motion";
@@ -24,7 +24,10 @@ const Fellows = () => {
         className="overflow-hidden"
       >
         <Layout>
-          <HeroSection title={"A Subtitle from Fellows"} imgUrl={hero} />
+          <HeroSection
+            title={"Pioneer missionaries of the last frontier of Quant finance"}
+            imgUrl={About1}
+          />
           <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
             <About />
           </motion.div>

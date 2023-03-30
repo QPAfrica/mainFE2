@@ -1,11 +1,14 @@
 import "../index.css";
 import React from "react";
 import Layout from "../components/Layout";
-import hero from "../../src/assets/images/hero.jpeg";
+import fellows from "../../src/assets/images/fellows.png";
 import TabComponent from "../components/TabComponent";
 import HeroSection from "../components/HeroSection";
 import FellowsComp from "../components/FellowsComp";
-import Fellowship from "../components/Fellowship";
+import FellowsComp1 from "../components/FellowsComp1";
+import FellowsComp2 from "../components/FellowsComp2";
+import FellowsComp3 from "../components/FellowsComp3";
+// import Fellowship from "../components/Fellowship";
 import { fadeIn, staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
@@ -16,25 +19,40 @@ const Fellows = () => {
       id: 1,
       name: "About",
       title: "About",
-      text: `Lorem ipsum dolor sit amet consectetur. Faucibus est ultrices sagittis eu. At morbi aliquet imperdiet elit ipsum egestas nunc volutpat massa. Interdum phasellus feugiat sit feugiat auctor placerat ac. Vel mollis id leo elementum. Neque morbi aenean egestas maecenas nulla non leo proin dignissim. Eu aliquam non laoreet malesuada mi et egestas. Leo dictum ut pulvinar fusce id sed blandit cras volutpat. Facilisi nulla tellus sed vitae enim ipsum sed porttitor sapien.
-      Consectetur risus magna volutpat et dignissim euismod. Phasellus est nulla eu est egestas tortor lorem. Egestas maecenas pellentesque pellentesque nunc ac at. Lacus aenean arcu id sed varius proin a. Nullam donec suscipit sit etiam.`,
+      text: `QuantPioneers-in-Residence (QiP) Program is a unique opportunity for experienced, international Quant professionals in both the Industry and Academia to join our team and work alongside local Quants and industry stakeholders in the finance and investment ecosystem in Africa. As a QiP, you will receive an equity share in the $1 million QP Incubated Fund and contribute your expertise in delivering consistent and superior returns.`,
+      list: [],
       link: "#about",
     },
     {
       id: 2,
-      name: "eligibility",
-      title: "Eligibility",
-      text: `Lorem ipsum dolor sit amet consectetur. Faucibus est ultrices sagittis eu. At morbi aliquet imperdiet elit ipsum egestas nunc volutpat massa. Interdum phasellus feugiat sit feugiat auctor placerat ac. Vel mollis id leo elementum. Neque morbi aenean egestas maecenas nulla non leo proin dignissim. Eu aliquam non laoreet malesuada mi et egestas. Leo dictum ut pulvinar fusce id sed blandit cras volutpat. Facilisi nulla tellus sed vitae enim ipsum sed porttitor sapien.
-      Consectetur risus magna volutpat et dignissim euismod. Phasellus est nulla eu est egestas tortor lorem. Egestas maecenas pellentesque pellentesque nunc ac at. Lacus aenean arcu id sed varius proin a. Nullam donec suscipit sit etiam.`,
+      name: "program_structure",
+      title: "Program Structure",
+      text: `Key features of the QiP Program include:
+      `,
+      list: [],
       link: "#eligibility",
     },
     {
       id: 3,
-      name: "selection",
-      title: "Selection",
-      text: `Lorem ipsum dolor sit amet consectetur. Faucibus est ultrices sagittis eu. At morbi aliquet imperdiet elit ipsum egestas nunc volutpat massa. Interdum phasellus feugiat sit feugiat auctor placerat ac. Vel mollis id leo elementum. Neque morbi aenean egestas maecenas nulla non leo proin dignissim. Eu aliquam non laoreet malesuada mi et egestas. Leo dictum ut pulvinar fusce id sed blandit cras volutpat. Facilisi nulla tellus sed vitae enim ipsum sed porttitor sapien.
-      Consectetur risus magna volutpat et dignissim euismod. Phasellus est nulla eu est egestas tortor lorem. Egestas maecenas pellentesque pellentesque nunc ac at. Lacus aenean arcu id sed varius proin a. Nullam donec suscipit sit etiam.`,
+      name: "ideal_candidate",
+      title: "Ideal Candidate",
+      text: `This program is designed for experienced Quant professionals in both the Industry and Academia who would like to help pioneer the Quant Industry in Africa.`,
+      list: [
+        "International industry professionals and academia who want to work on novel data and Quant-pristine economies",
+        "Industry professionals with strong experience applying mathematical models and quantitative finance in the real world settings.",
+        "Academic or/and researcher in quantitative fields such as mathematics, physics, computer science, machine learning, engineering, or finance.",
+        "Mentor and Collaborator: ideal candidates should be willing to mentor young talented local Quant pioneers, fostering their growth and development in the field. In addition, you should be open to collaborating with other QiPs and local stakeholders.",
+        "Can contribute 10-20 hours per week to the program.",
+      ],
       link: "#selection",
+    },
+    {
+      id: 4,
+      name: "apply",
+      title: "Apply",
+      text: `To apply, please submit your application and any relevant supporting materials  here  by the deadline of May 31, 2023. We will review all applications and contact shortlisted candidates for interviews. Thank you for your interest in the Quant in Residence Program, and we look forward to receiving your application.`,
+      list: [],
+      link: "#apply",
     },
   ];
 
@@ -47,21 +65,21 @@ const Fellows = () => {
     },
     {
       id: 2,
-      name: "Eligibility",
+      name: "Program Structure",
       link: "#eligibility",
-      content: <FellowsComp data={totalData[1]} />,
+      content: <FellowsComp1 data={totalData[1]} />,
     },
     {
       id: 3,
-      name: "Selection",
+      name: "Ideal Candidate",
       link: "#selection",
-      content: <FellowsComp data={totalData[2]} />,
+      content: <FellowsComp2 data={totalData[2]} />,
     },
     {
       id: 4,
-      name: "Fellowship",
-      link: "#fellowship",
-      content: <Fellowship />,
+      name: "Apply",
+      link: "#apply",
+      content: <FellowsComp3 data={totalData[3]} />,
     },
   ];
 
@@ -80,7 +98,12 @@ const Fellows = () => {
         className="overflow-hidden"
       >
         <Layout>
-          <HeroSection title={"A Subtitle from Fellows"} imgUrl={hero} />
+          <HeroSection
+            title={
+              "An invitation to pioneer the last frontier of Quant investing!"
+            }
+            imgUrl={fellows}
+          />
           <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
             <TabComponent links={data} />
           </motion.div>

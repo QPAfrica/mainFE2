@@ -16,7 +16,7 @@ const HeroSection = ({ title, imgUrl }) => {
           variants={fadeIn("right", "spring", 0.2, 0.75)}
           className="items-center flex flex-col justify-center w-full sm:w-1/2 text-center sm:text-left py-6 font-bold"
         >
-          <h1 className="text-3xl py-8 sm:py-0 text-white">{title}</h1>
+          <h1 className="text-3xl sm:pl-48 py-8 sm:py-0 text-white">{title}</h1>
         </motion.div>
         <motion.div
           variants={fadeIn("left", "spring", 0.2, 0.75)}

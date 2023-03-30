@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../index.css";
 import "./home.css";
 import { TiArrowRightThick } from "react-icons/ti";
-import { GrFacebookOption, GrLinkedinOption, GrTwitter } from "react-icons/gr";
+import { GrLinkedinOption, GrTwitter } from "react-icons/gr";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
@@ -40,37 +40,47 @@ const home = () => {
                     to="fellows"
                     className="flex hover:underline hover:duration-300 flex-row gap-1 items-center"
                   >
-                    <p className="text-sm sm:text-base">QP Fellows</p>
+                    <p className="text-sm sm:text-base">
+                      QP-in-Residence Fellows
+                    </p>
                     <TiArrowRightThick className="rotate-[-45deg]" size={18} />
                   </Link>
                   <Link
-                    to=""
                     target="_blank"
                     className="flex flex-row hover:underline hover:duration-300 gap-1 items-center"
                   >
-                    <p className="text-sm sm:text-base ">QP Incubaded Funds</p>
+                    <a
+                      target="_blank"
+                      href="https://workdrive.zohoexternal.com/external/5eaf33c6edd4aecbb4d79128dbe1d39935f70c30e245c163ef001ecc2bfe5b9a"
+                      className="text-sm sm:text-base "
+                      rel="noreferrer"
+                    >
+                      QP Incubaded Funds
+                    </a>
                     <TiArrowRightThick className="rotate-[-45deg]" size={18} />
                   </Link>
                 </div>
                 <div class="flex w-full md:w-2/3 lg:w-1/2 text-sm justify-center sm:justify-start text-gray-300 p-4">
-                  <a
+                  {/* <a
                     href="/"
                     target="_blank"
                     class="mr-4 hover:scale-110 duration-200 md:mr-6 bg-slate-400 rounded-md p-1"
                   >
                     <GrFacebookOption size={18} color={"black"} />
-                  </a>
+                  </a> */}
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/company/qp-africa/"
                     target="_blank"
                     class="mr-4 hover:scale-110 duration-200 md:mr-6 bg-slate-400 rounded-md p-1"
+                    rel="noreferrer"
                   >
                     <GrLinkedinOption size={18} color={"black"} />
                   </a>
                   <a
-                    href="/"
+                    href="https://twitter.com/qp_africa"
                     target="_blank"
                     class="mr-4 hover:scale-110 duration-200 md:mr-6 bg-slate-400 rounded-md p-1"
+                    rel="noreferrer"
                   >
                     <GrTwitter size={18} color={"black"} />
                   </a>

@@ -1,35 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import imgUrl from "../../src/assets/images/hero.jpeg";
+//import imgUrl from "../../src/assets/images/hero.jpeg";
 import Blog from "../components/Blog";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { staggerContainer } from "../utils/motion";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 
-const blogs = [
-  {
-    id: 1,
-    title: "How QP Africa will affect the Quant Industry Worldwide",
-    desc: `Lorem ipsum dolor sit amet consectetur. Faucibus est ultrices
-    sagittis eu. At morbi aliquet imperdiet elit ipsum egestas nunc
-    volutpat massa. Interdum phasellus feugiat sit feugiat auctor
-    placerat ac.`,
-    img: imgUrl,
-    date: "15th May, 2023",
-  },
-  {
-    id: 2,
-    title: "How QP Africa will affect the Quant Industry Worldwide",
-    desc: `Lorem ipsum dolor sit amet consectetur. Faucibus est ultrices
-    sagittis eu. At morbi aliquet imperdiet elit ipsum egestas nunc
-    volutpat massa. Interdum phasellus feugiat sit feugiat auctor
-    placerat ac.`,
-    img: imgUrl,
-    date: "15th May, 2023",
-  },
-];
+// const blogs = [
+//   {
+//     id: 1,
+//     title: "How QP Africa will affect the Quant Industry Worldwide",
+//     desc: `Lorem ipsum dolor sit amet consectetur. Faucibus est ultrices
+//     sagittis eu. At morbi aliquet imperdiet elit ipsum egestas nunc
+//     volutpat massa. Interdum phasellus feugiat sit feugiat auctor
+//     placerat ac.`,
+//     img: imgUrl,
+//     date: "15th May, 2023",
+//   },
+//   {
+//     id: 2,
+//     title: "How QP Africa will affect the Quant Industry Worldwide",
+//     desc: `Lorem ipsum dolor sit amet consectetur. Faucibus est ultrices
+//     sagittis eu. At morbi aliquet imperdiet elit ipsum egestas nunc
+//     volutpat massa. Interdum phasellus feugiat sit feugiat auctor
+//     placerat ac.`,
+//     img: imgUrl,
+//     date: "15th May, 2023",
+//   },
+// ];
 
-const blog = () => {
+const Blogs = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          "https://qp-africa-api.vercel.app/api/post"
+        );
+        setBlogs(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -51,11 +69,7 @@ const blog = () => {
             className="py-10"
           >
             {blogs.map((blog, index) => (
-              <motion.div
-                variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-              >
-                <Blog blog={blog} />
-              </motion.div>
+              <Blog blog={blog} />
             ))}
           </motion.div>
         </div>
@@ -64,4 +78,4 @@ const blog = () => {
   );
 };
 
-export default blog;
+export default Blogs;
