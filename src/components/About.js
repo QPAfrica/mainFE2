@@ -1,5 +1,4 @@
 import React from "react";
-import About2 from "../../src/assets/images/about2.png";
 // import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 // import { Link } from "react-router-dom";
 // import person1 from "../../src/assets/images/person1.webp";
@@ -114,7 +113,11 @@ const About = () => {
             className="h-56 sm:w-2/5 max-w-[330px] mx-auto"
             variants={fadeIn("left", "teween", 0.2, 1)}
           >
-            <img src={About2} class=" rounded-xl" alt="Flowbite Logo" />
+            <img
+              src="https://res.cloudinary.com/ddlupbcws/image/upload/v1680264211/about2_tnq1uh.png"
+              class=" rounded-xl"
+              alt="Flowbite Logo"
+            />
           </motion.span>
         </div>
         <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />

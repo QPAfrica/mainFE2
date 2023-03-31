@@ -1,7 +1,7 @@
 import "../index.css";
 import React from "react";
 import Layout from "../components/Layout";
-import About1 from "../../src/assets/images/about1.png";
+// import About1 from "../../src/assets/images/about1.png";
 import HeroSection from "../components/HeroSection";
 import About from "../components/About";
 import { fadeIn, staggerContainer } from "../utils/motion";
@@ -26,7 +26,7 @@ const Fellows = () => {
         <Layout>
           <HeroSection
             title={"Pioneer missionaries of the last frontier of Quant finance"}
-            imgUrl={About1}
+            imgUrl="https://res.cloudinary.com/ddlupbcws/image/upload/v1680264210/about1_afktim.png"
           />
           <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
             <About />

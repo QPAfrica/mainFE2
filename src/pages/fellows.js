@@ -1,7 +1,7 @@
 import "../index.css";
 import React from "react";
 import Layout from "../components/Layout";
-import fellows from "../../src/assets/images/fellows.png";
+// import fellows from "../../src/assets/images/fellows.png";
 import TabComponent from "../components/TabComponent";
 import HeroSection from "../components/HeroSection";
 import FellowsComp from "../components/FellowsComp";
@@ -102,7 +102,7 @@ const Fellows = () => {
             title={
               "An invitation to pioneer the last frontier of Quant investing!"
             }
-            imgUrl={fellows}
+            imgUrl="https://res.cloudinary.com/ddlupbcws/image/upload/v1680264206/fellows_lllek8.png"
           />
           <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
             <TabComponent links={data} />

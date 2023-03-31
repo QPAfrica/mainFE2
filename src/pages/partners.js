@@ -1,9 +1,9 @@
 import "../index.css";
 import React from "react";
 import Layout from "../components/Layout";
-import Academy from "../../src/assets/images/academy.png";
-import Industry from "../../src/assets/images/industry.png";
-import Partner from "../../src/assets/images/partner.png";
+// import Academy from "../../src/assets/images/academy.png";
+// import Industry from "../../src/assets/images/industry.png";
+// import Partner from "../../src/assets/images/partner.png";
 import HeroSection from "../components/HeroSection";
 import TabsComponent from "../components/TabComponent";
 import PartnerComp from "../components/PartnerComp";
@@ -25,13 +25,13 @@ const Partners = () => {
       
       So why wait? Let’s talk.
       `,
-      img: Industry,
+      img: "https://res.cloudinary.com/ddlupbcws/image/upload/v1680264209/industry_ranxfe.png",
       addlink: "/contact",
     },
     {
       id: 2,
       name: "Academics",
-      img: Academy,
+      img: "https://res.cloudinary.com/ddlupbcws/image/upload/v1680264211/academy_dl5y4d.png",
       text: `Bring together Quant finance professionals and academic researchers to tackle real-world investment challenges and inspire the next generation of Quants and startups in Africa.
 
       Together, we will work to develop cutting-edge quantitative and data science solutions for businesses in the financial service industry. By collaborating, we can combine industry and local expertise with academic research to develop solutions that are both practical and innovative.
@@ -67,7 +67,7 @@ const Partners = () => {
           title={
             "Discover the Power of Collaboration: Startup-Industry-Academic Partnership to Pioneer the Quant Industry in Africa"
           }
-          imgUrl={Partner}
+          imgUrl="https://res.cloudinary.com/ddlupbcws/image/upload/v1680264211/partner_v8gspv.png"
         />
         <TabsComponent links={data} />
       </Layout>
