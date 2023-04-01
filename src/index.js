@@ -18,8 +18,8 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<SingleBlog />} />
-        <Route path="fellows" element={<Fellows />} />
-        <Route path="partners" element={<Partners />} />
+        <Route path="/fellows" element={<Fellows />} />
+        <Route path="/partners" element={<Partners />} />
       </Routes>
     </BrowserRouter>
   );
