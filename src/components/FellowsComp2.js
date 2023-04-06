@@ -27,7 +27,7 @@ const FellowsComp = ({ data }) => {
           <a
             target="_blank"
             className="flex flex-row justify-center items-center mr-2"
-            href="https://forms.zoho.com/ayo1/form/QiP"
+            href="https://forms.zohopublic.com/ayo1/form/QiP/formperma/urfsIbYmEMWzebydWlSNSIM1h4x3GKLiZLucQXEGGPo"
             rel="noreferrer"
           >
             Apply
