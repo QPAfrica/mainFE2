@@ -102,7 +102,7 @@ const Fellows = () => {
             title={
               "An invitation to pioneer the last frontier of Quant investing!"
             }
-            imgUrl="https://res.cloudinary.com/ddlupbcws/image/upload/v1680264206/fellows_lllek8.png"
+            imgUrl="https://res.cloudinary.com/ddlupbcws/image/upload/v1680800158/WhatsApp_Image_2023-04-06_at_17.36.40-removebg-preview_jlx3p9.png"
           />
           <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
             <TabComponent links={data} />

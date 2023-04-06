@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 
 const Layout = ({ children }) => {
   return (
-    <div class="mx-auto">
+    <div class="mx-auto bg-black">
       <NavBar />
       {children}
       <Footer />

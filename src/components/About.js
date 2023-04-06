@@ -82,7 +82,7 @@ const About = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: "false", amount: 0.1 }}
-      className="w-full bg-gray-900"
+      className="w-full bg-black"
     >
       <div className="max-w-screen-lg px-4 mx-auto">
         <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
@@ -114,7 +114,7 @@ const About = () => {
             variants={fadeIn("left", "teween", 0.2, 1)}
           >
             <img
-              src="https://res.cloudinary.com/ddlupbcws/image/upload/v1680264211/about2_tnq1uh.png"
+              src="https://res.cloudinary.com/ddlupbcws/image/upload/v1680797600/abstract4_ioad4o.jpg"
               class=" rounded-xl"
               alt="Flowbite Logo"
             />

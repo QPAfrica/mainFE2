@@ -18,7 +18,7 @@ const home = () => {
         <title>Home - QPAfrica</title>
         <meta name="description" content="Meta Description here" />
       </Helmet>
-      <div className="relative w-full App bg-gray-900 max-w-full">
+      <div className="relative w-full App bg-black max-w-full">
         <div className="relative min-h-screen text-white">
           <div className="circle mix-blend-multiply"></div>
           <div className="littlecircle mix-blend-multiply"></div>

@@ -4,10 +4,10 @@ export default function TabsComponent({ links }) {
   const [openTab, setOpenTab] = useState(links[0].name);
 
   return (
-    <div className="w-full bg-gray-900">
+    <div className="w-full bg-black">
       <div className="">
         <div>
-          <div className="border-b-[1px] max-w-screen-lg md:mx-auto mx-3 pt-2 top-0 z-200 sticky bg-gray-900 border-gray-500 sm:px-28">
+          <div className="border-b-[1px] max-w-screen-lg md:mx-auto mx-3 pt-2 top-0 z-200 sticky bg-black border-gray-500 sm:px-28">
             <ul
               className={`grid ${
                 links.length === 4 ? "grid-cols-4" : "grid-cols-2"

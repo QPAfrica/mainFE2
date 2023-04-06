@@ -9,7 +9,7 @@ const HeroSection = ({ title, imgUrl }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: "false", amount: 0.1 }}
-      className="px-4 h-[550px] sm:h-[500px] bg-gray-900 pt-16 sm:pt-36"
+      className="px-4 h-[550px] sm:h-[500px] bg-black pt-16 sm:pt-36"
     >
       <div className="flex flex-col sm:flex-row justify-center items-center container mx-auto">
         <motion.div

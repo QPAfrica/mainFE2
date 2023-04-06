@@ -40,13 +40,13 @@ const Contact = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: "false", amount: 0.1 }}
-        className="relative w-full App bg-gray-900 max-w-full"
+        className="relative w-full App bg-black max-w-full"
       >
         <div className="relative h-screen text-white">
           {/* <div className="circle mix-blend-multiply"></div>
           <div className="littlecircle mix-blend-multiply"></div> */}
           <NavBar />
-          <div className="px-4 sm:pt-20 bg-gray-900 w-full absolute top-[50%] translate-y-[-50%]">
+          <div className="px-4 sm:pt-20 bg-black w-full absolute top-[50%] translate-y-[-50%]">
             <motion.div
               variants={fadeIn("down", "spring", 0.2, 0.75)}
               className="max-w-screen-md mx-auto"

@@ -22,7 +22,7 @@ const NavBar = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: "true" }}
-      class="absolute sm:top-5 left-0 right-0 justify-center py-5 sm:py-0 sm:bg-gray-800 bg-gray-900 sm:px-4 sm:mx-auto max-w-screen-lg z-10 sm:rounded-3xl"
+      class="absolute sm:top-5 left-0 right-0 justify-center py-5 sm:py-0 sm:bg-black bg-black sm:px-4 sm:mx-auto max-w-screen-lg z-10 sm:rounded-3xl"
     >
       <div class="container px-6 sm:px-0 flex items-center justify-between sm:mx-auto">
         <Link to="/" class="items-center ml-3">
@@ -114,7 +114,7 @@ const NavBar = () => {
           ></motion.div>
           <motion.div
             variants={fadeIn("down", "spring", 0.2, 0.75)}
-            class="flex px-6 py-10 absolute z-30 top-18 w-full sm:hidden flex-col gap-y-3 rounded-b-lg bg-gray-900 sm:mt-0 sm:font-medium md:border-0 sm:bg-gray-900"
+            class="flex px-6 py-10 absolute z-30 top-18 w-full sm:hidden flex-col gap-y-3 rounded-b-lg bg-black sm:mt-0 sm:font-medium md:border-0 sm:bg-gray-900"
           >
             <Link
               to="/partners"
