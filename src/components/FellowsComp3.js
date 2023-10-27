@@ -24,7 +24,7 @@ const FellowsComp = ({ data }) => {
             <a
               target="_blank"
               className="underline"
-              href="https://forms.zoho.com/ayo1/form/QiP"
+              href="https://forms.zohopublic.com/ayo1/form/QiP/formperma/urfsIbYmEMWzebydWlSNSIM1h4x3GKLiZLucQXEGGPo"
               rel="noreferrer"
             >
               here

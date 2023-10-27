@@ -55,7 +55,7 @@ const home = () => {
                       className="text-sm sm:text-base "
                       rel="noreferrer"
                     >
-                      QP Incubaded Funds
+                      QP Incubated Funds
                     </a>
                     <TiArrowRightThick className="rotate-[-45deg]" size={18} />
                   </Link>

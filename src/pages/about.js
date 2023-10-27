@@ -26,7 +26,7 @@ const Fellows = () => {
         <Layout>
           <HeroSection
             title={"Pioneer missionaries of the last frontier of Quant finance"}
-            imgUrl="https://res.cloudinary.com/ddlupbcws/image/upload/v1680797617/9819776_12830_jsumzd.jpg"
+            imgUrl="https://res.cloudinary.com/ddlupbcws/image/upload/v1698395977/9819776_12830_jsumzd_as64cm.jpg"
           />
           <motion.div variants={fadeIn("up", "teween", 0.2, 1)}>
             <About />

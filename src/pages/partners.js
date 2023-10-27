@@ -31,7 +31,7 @@ const Partners = () => {
     {
       id: 2,
       name: "Academics",
-      img: "https://res.cloudinary.com/ddlupbcws/image/upload/v1680795601/6539026_1527_rawhsw.jpg",
+      img: "https://res.cloudinary.com/ddlupbcws/image/upload/v1698395978/6539026_1527_rawhsw_huarfl.jpg",
       text: `Bring together Quant finance professionals and academic researchers to tackle real-world investment challenges and inspire the next generation of Quants and startups in Africa.
 
       Together, we will work to develop cutting-edge quantitative and data science solutions for businesses in the financial service industry. By collaborating, we can combine industry and local expertise with academic research to develop solutions that are both practical and innovative.
