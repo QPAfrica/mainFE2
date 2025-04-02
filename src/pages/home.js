@@ -51,7 +51,7 @@ const home = () => {
                   >
                     <a
                       target="_blank"
-                      href="https://workdrive.zohoexternal.com/external/5eaf33c6edd4aecbb4d79128dbe1d39935f70c30e245c163ef001ecc2bfe5b9a"
+                      href="https://qpafrica.replit.app"
                       className="text-sm sm:text-base "
                       rel="noreferrer"
                     >
